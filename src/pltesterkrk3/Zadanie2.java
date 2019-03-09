@@ -1,3 +1,5 @@
+package pltesterkrk3;
+
 import java.util.Scanner;
 
 public class Zadanie2 {
@@ -8,13 +10,14 @@ public class Zadanie2 {
 
     }
     private void wczytajCyfry() {
-        int cyfra = zadanie.czytajWejscie();
-        zadanie.sprawdzCyfry(cyfra);
-        if (licznik <1){
-            licznik++;
-            wczytajCyfry();
-        }
-        wczytajCyfry();
+//        System.out.println("=====>+licznik");
+//        int cyfra = zadanie.czytajWejscie();
+        zadanie.sprawdzCyfry(2,3,5,6,7,100);
+//        if (licznik <1){
+//            licznik++;
+//            wczytajCyfry();
+//        }
+//        wczytajCyfry();
     }
 
     private int czytajWejscie () {
@@ -28,7 +31,8 @@ public class Zadanie2 {
 
     }
 
-    private void sprawdzCyfry(int cyfra) {
+    private void sprawdzCyfry(int ...cyfry) {
+        for (int cyfra: cyfry  ) {
         if (cyfra >= 0 && cyfra <= 9) {
             switch (cyfra) {
                 case 3:
@@ -42,6 +46,7 @@ public class Zadanie2 {
             System.out.println("Niepoprawna wartosc");
         }
     }
+}
 }
 
 
