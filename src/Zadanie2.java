@@ -1,11 +1,22 @@
 import java.util.Scanner;
 
 public class Zadanie2 {
+    private static Zadanie2 zadanie = new Zadanie2() ;
+    private  int licznik = 5;
     public static void main(String[] args) {
-        Zadanie2 zadanie = new Zadanie2();
+        zadanie.wczytajCyfry();
+
+    }
+    private void wczytajCyfry() {
         int cyfra = zadanie.czytajWejscie();
         zadanie.sprawdzCyfry(cyfra);
+        if (licznik <1){
+            licznik++;
+            wczytajCyfry();
+        }
+        wczytajCyfry();
     }
+
     private int czytajWejscie () {
         System.out.println( "Podaj cyfre");
         Scanner scanner = new Scanner( System. in) ;
